@@ -1,9 +1,9 @@
-# Traceability application network
+# Traceability application network on Hyperledger Fabric 2.3.2
 
 In this supply chain network there will be 3 participating organizations:
   * Farmers (Org1) (2 nodes)
   * Retailers (Org2) (2 nodes)
-  * Supermarket-Consumers(Org3) (1 node)
+  * Supermarket-Consumers (Org3) (1 node)
 
 (Insert Network Architecture Image)
 
@@ -15,7 +15,26 @@ Any transactions details (prices etc) should remain private and only transacting
 ``` 
 ./network.sh up createChannel -ca
 ```
+(End result image)
 
-2. 
+2. Deploy smart contract with private collection configuration
+```
+./network.sh deployCC -ccn try -ccp ../@5Scenario/ -ccl go -ccep "OR('Org1MSP.peer','Org2MSP.peer','Org3MSP.peer')" -cccg ../@5Scenario/collections_config.json
+
+```
+(result image)
+
+3. Deploy Front-end and Backend
+
+On separate terminals run while on backend folder:
+To run backend:
+```
+cd backend/
+npm run server
+```
+To run front-end:
+```
+npm run client
+```
 
 

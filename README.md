@@ -1,4 +1,4 @@
-# Supply chain Traceability application network on Hyperledger Fabric 2.3.2
+# Supply chain Traceability application network on Hyperledger Fabric v2.3.2
 
 In this supply chain network there will be 3 participating organizations:
   * Farmers (Org1) (2 nodes)

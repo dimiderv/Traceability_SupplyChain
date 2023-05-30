@@ -1,0 +1,4 @@
+Get phase2
+
+./network.sh deployCC -ccn try -ccp ../phase2/ -ccl go -ccep "OR('Org1MSP.peer','Org2MSP.peer')" -cccg ../asset-transfer-private-data/chaincode-go/collections_config.json 
+

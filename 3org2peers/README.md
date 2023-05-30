@@ -25,7 +25,10 @@ Any transactions details (prices etc) should remain private and only transacting
 (result image)
 
 3. Deploy Front-end and Backend
-
+Go on ImprovedUi/WebUi/backend folder.
+```
+cd ../ImprovedUi/WebUi/
+```
 On separate terminals run while on backend folder:
 To run backend:
 ```
@@ -36,5 +39,15 @@ To run front-end:
 ```
 npm run client
 ```
+Alternatively use ./start.sh script to automatically start the whole application. 
+NOTE: My terminal is Tilix so you should modify the script commands on ImprovedUi/WebUi/backend/package.json.
+On the dev command in the package.json change Tilix to your local terminal. 
+```
+  "scripts": {
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix ../frontend",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"tilix -a session-add-down -x npm run client\""
+  }
+ ```
 
 

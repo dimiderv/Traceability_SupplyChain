@@ -50,4 +50,7 @@ On the dev command in the package.json change Tilix to your local terminal.
   }
  ```
 
+-npm version 6.14.15
+-node version 14.17.6
+
 
